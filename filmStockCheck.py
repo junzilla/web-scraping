@@ -7,6 +7,7 @@ def film_stock_check(sites_config):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
+    count = 0
 
     print(f"\n====== 开始检查 (共 {len(sites_config)} 个目标) ======\n")
 
@@ -27,23 +28,26 @@ def film_stock_check(sites_config):
                 element = soup.select_one(selector)
                 if element:
                     text = element.get_text().strip().lower()
-                    #print(f"   (调试: 抓取到的文字是 '{text}')")
-                    bad_words = ["out of stock", "sold out", "backordered", "notify when", "unavailable", "special", "in store"]
+                    #print(f"   (调试: 抓取到 '{text}')")
+                    bad_words = ["out of stock", "sold out", "backordered", "notify when", "unavailable", "special"]
                     is_out_of_stock = any(w in text for w in bad_words)
                     if not is_out_of_stock:
-                        print(f"✅ [有货] {film_name} @ {site_name}")
+                        print(f"🟢 [有货] {film_name} @ {site_name}")
                         print(f"      🔗: {url}\n")
+                        count += 1
                     else:
-                        print(f"❌ [无货] {film_name} @ {site_name}\n")
+                        print(f"🔴 [无货] {film_name} @ {site_name}\n")
                 else:
-                    print(f"⚠️  [结构变动] {site_name}: 找不到选择器 '{selector}'。网站可能改版了？\n")
+                    print(f"🛠️  [变动] {site_name}: 找不到选择器 '{selector}'。网站可能改版了？\n")
+                    print(f"       🔗: {url}\n")
         except Exception as e:
             print(f"⚠️ [出错] {site_name}: {e}")
-    print("\n========== 检查完成 ==========\n")
+
+    print(f"\n========== 检查完成，{count} 个有货 ==========\n")
 
 
 tracking_list = [
-    ########## Provia 100F ##########
+    ########## FUJICHROME Provia 100F ##########
     {
         "id": 1,
         "website_name": "Dodd Camera",
@@ -59,13 +63,6 @@ tracking_list = [
         "selector": ".availability-value"
     },
     {
-        "id": 3,
-        "website_name": "B&H",
-        "film_name": "Provia 100F",
-        "url": "https://www.bhphotovideo.com/c/product/181489-USA/Fujifilm_14883175_RDP_III_135_36_Fujichrome_Provia.html",
-        "selector": "[data-selenium='stockStatus']"
-    },
-    {
         "id": 4,
         "website_name": "Henry's",
         "film_name": "Provia 100F",
@@ -78,13 +75,6 @@ tracking_list = [
         "film_name": "Provia 100F",
         "url": "https://www.uniquephoto.com/product/fujifilmrdpiii13536provia100f14981733",
         "selector": ".chakra-badge"
-    },
-    {
-        "id": 6,
-        "website_name": "Freestyle",
-        "film_name": "Provia 100F",
-        "url": "https://www.freestylephoto.com/16326028",
-        "selector": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     },
     {
         "id": 7,
@@ -106,13 +96,6 @@ tracking_list = [
         "film_name": "Provia 100F",
         "url": "https://www.ultrafineonline.com/fuproprrdp10.html",
         "selector": ".add-to-cart"
-    },
-    {
-        "id": 10,
-        "website_name": "The Photo Center",
-        "film_name": "Provia 100F",
-        "url": "https://thephotocenter.com/shop/fujifilm-provia-100f-professional-135-36/5c50798b-9597-4b63-bf21-0dda2bd84a8a",
-        "selector": ".d-product-price-in-store-text"
     },
     {
         "id": 11,
@@ -149,7 +132,42 @@ tracking_list = [
         "url": "https://www.stewartsphoto.com/fujifilm-provia-100-pro-rdpiii-135-36.html",
         "selector": ".out-of-stock"
     },
-    ########## Velvia 100 ##########
+    {
+        "id": 16,
+        "website_name": "Film Supply Club",
+        "film_name": "Provia 100F",
+        "url": "https://filmsupply.club/products/fujfilm-provia-100-35mm-color-positive-film-single-roll",
+        "selector": "[data-add-to-cart-text]"
+    },
+    {
+        "id": 17,
+        "website_name": "OC Camera",
+        "film_name": "Provia 100F",
+        "url": "https://www.occamera.com/product-p/16326028(32616).htm",
+        "selector": "div[itemprop='offers']"
+    },
+    {
+        "id": 18,
+        "website_name": "Nelson",
+        "film_name": "Provia 100F",
+        "url": "https://nelsonphotoandvideo.com/products/fuji-pro-rdpiii-135-36",
+        "selector": ".product-info__add-button"
+    },
+    {
+        "id": 19,
+        "website_name": "Austin Camera",
+        "film_name": "Provia 100F",
+        "url": "https://austincamera.com/products/fujifilm-fujichrome-provia-100f-professiona-color-transparency-film-35mm-roll-film-36-exposures",
+        "selector": "[data-add-to-cart-text]"
+    },
+    {
+        "id": 20,
+        "website_name": "Reformed Film Lab",
+        "film_name": "Provia 100F",
+        "url": "https://reformedfilmlab.com/products/fuji-provia-100f-35mm-36-exposure-roll",
+        "selector": "[data-add-to-cart-text]"
+    },
+    ########## FUJICHROME Velvia 100 ##########
     {
         "id": 40,
         "website_name": "Henry's",
@@ -164,7 +182,7 @@ tracking_list = [
         "url": "https://legacy-photolab.com/products/fuji-fujichrome-velvia-100-iso-35mm-x-36-exp",
         "selector": ".product__badge"
     },
-    ########## Velvia 50 ##########
+    ########## FUJICHROME Velvia 50 ##########
     {
         "id": 80,
         "website_name": "Unique Photo",
@@ -200,36 +218,64 @@ tracking_list = [
         "url": "https://legacy-photolab.com/products/fujichrome-velvia-50-35mm-color-positive-film",
         "selector": ".product__badge"
     },
-    ########## KODAK E100 ##########
+    {
+        "id": 85,
+        "website_name": "Film Supply Club",
+        "film_name": "Velvia 50",
+        "url": "https://filmsupply.club/products/fujfilm-velvia-50-35mm-color-positive-film-single-roll-purchase",
+        "selector": "[data-add-to-cart-text]"
+    },
+    {
+        "id": 86,
+        "website_name": "OC Camera",
+        "film_name": "Velvia 50",
+        "url": "https://www.occamera.com/product-p/16329161(122).htm",
+        "selector": "div[itemprop='offers']"
+    },
+    {
+        "id": 87,
+        "website_name": "Reformed Film Lab",
+        "film_name": "Velvia 50",
+        "url": "https://reformedfilmlab.com/products/fujifilm-velvia-50-35mm-36-exposure-roll",
+        "selector": "[data-add-to-cart-text]"
+    },
+    {
+        "id": 88,
+        "website_name": "Coastal Film Lab",
+        "film_name": "Velvia 50",
+        "url": "https://www.coastalfilmlab.com/products/fujifilm-velvia-50-36exp-35mm-color-positive-film",
+        "selector": ".price__badge-sold-out"
+    },
+    ########## Kodak Professional Ektachrome E100 Color Reversal Film ##########
     {
         "id": 100,
         "website_name": "Dodd Camera",
-        "film_name": "KODAK E100",
+        "film_name": "Kodak E100",
         "url": "https://doddcamera.com/kodak-professional-ektachrome-e100-color-reversal-film-135-36",
         "selector": ".stock"
     },
     {
         "id": 101,
         "website_name": "Samy's Camera",
-        "film_name": "KODAK E100",
+        "film_name": "Kodak E100",
         "url": "https://www.samys.com/p/Film/1884576/Ektachrome-E100-Color-Transparency-Film-35mm-Roll-Film,-36-Exposures/205598.html",
         "selector": ".availability-value"
     },
     {
         "id": 102,
         "website_name": "B&H",
-        "film_name": "KODAK E100",
+        "film_name": "Kodak E100",
         "url": "https://www.bhphotovideo.com/c/product/274846-USA/Kodak_1884576_E100G_135_36_Ektachrome_Professional.html",
         "selector": "[data-selenium='stockStatus']!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     },
     {
         "id": 103,
         "website_name": "Henry's",
-        "film_name": "KODAK E100",
+        "film_name": "Kodak E100",
         "url": "https://www.henrys.com/kodak-ektachrome-e100g-135-36-100iso/5637232799.p?size=35mm&style=36+Exp",
         "selector": ".ms-buybox__inventory-label"
     },
-    ########## FLIC FILM Chrome 100 ##########
+    ########## Flic Film Chrome 100 Color Reversal Film - Respooled Kodak Ektachrome 100D ##########
     {
         "id": 105,
         "website_name": "Unique Photo",
@@ -237,7 +283,7 @@ tracking_list = [
         "url": "https://www.uniquephoto.com/product/flic-film-chrome-100-35mm-36-ex",
         "selector": ".chakra-badge"
     },
-        {
+    {
         "id": 106,
         "website_name": "B&C Camera",
         "film_name": "Flic Film Chrome 100",
@@ -247,8 +293,12 @@ tracking_list = [
 ]
 
 
-velvia50_urls = [
+untracking_list = [
+    "https://thephotocenter.com/shop/fujifilm-provia-100f-professional-135-36/5c50798b-9597-4b63-bf21-0dda2bd84a8a",
+    "https://www.royalwefilmlab.com/product/-35mm-slide-film-flic-film-chrome-100-35mm-respooled-ektachrome-e100-36exp/71",
     "https://www.freestylephoto.com/02303205",
+    "https://www.freestylephoto.com/16326028",
+    "https://www.bhphotovideo.com/c/product/181489-USA/Fujifilm_14883175_RDP_III_135_36_Fujichrome_Provia.html"
 ]
 
 
