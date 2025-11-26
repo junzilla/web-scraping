@@ -12,7 +12,7 @@ def film_stock_check(sites_config):
     out_of_stock_count = 0
     need_fix_count = 0
 
-    print(f"\n====== 开始检查 (共 {len(sites_config)} 个目标) ======\n")
+    print(f"\n=============== 开始检查 (共 {len(sites_config)} 个目标) ===============\n")
 
     for item in sites_config:
         id = item['id']
@@ -58,8 +58,10 @@ def film_stock_check(sites_config):
                     need_fix += 1
         except Exception as e:
             print(f"⚠️  [出错] {site_name}: {e}")
-
-    print(f"\n========== 检查完成。{in_stock_count} 个有货，{out_of_stock_count} 个无货，{need_fix_count} 需要维护 ==========\n")
+    
+    success_count = in_stock_count + out_of_stock_count + need_fix_count
+    print(f"=================== {success_count}/{len(sites_config)} 检查完成 ====================")
+    print(f"========== {in_stock_count} 个有货，{out_of_stock_count} 个无货，{need_fix_count} 个需要维护 ==========\n")
 
 
 tracking_list = [
