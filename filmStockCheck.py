@@ -82,195 +82,188 @@ tracking_list = [
     },
     {
         "id": 102,
-        "website_name": "Henry's",
-        "film_name": "Provia 100F",
-        "url": "https://www.henrys.com/fujichrome-provia-100f-135-36/5637232795.p?size=35mm&style=36+Exp",
-        "selector": ".ms-buybox__inventory-label" 
-    },
-    {
-        "id": 103,
         "website_name": "Unique Photo",
         "film_name": "Provia 100F",
         "url": "https://www.uniquephoto.com/product/fujifilmrdpiii13536provia100f14981733",
         "selector": ".chakra-heading"
     },
     {
-        "id": 104,
+        "id": 103,
         "website_name": "Tempe camera",
         "film_name": "Provia 100F",
         "url": "https://www.tempecamera.biz/Fujifilm_1759_p/1759.htm",
         "selector": "div[itemprop='offers']"
     },
     {
-        "id": 105,
+        "id": 104,
         "website_name": "Retrospekt",
         "film_name": "Provia 100F",
         "url": "https://retrospekt.com/products/fujifilm-provia-100f-35mm-color-reversal-film",
         "selector": ".buy-buttons"
     },
     {
-        "id": 106,
+        "id": 105,
         "website_name": "Photo Warehouse",
         "film_name": "Provia 100F",
         "url": "https://www.ultrafineonline.com/fuproprrdp10.html",
         "selector": ".add-to-cart h2"
     },
     {
-        "id": 107,
+        "id": 106,
         "website_name": "B&C Camera",
         "film_name": "Provia 100F",
         "url": "https://store.bandccamera.com/products/fuji-pro-rdpiii-135-36",
         "selector": ".product-form__inventory"
     },
     {
-        "id": 108,
+        "id": 107,
         "website_name": "theFINDlab",
         "film_name": "Provia 100F",
         "url": "https://thefindlab.ecwid.com/Fujichrome-Provia-100F-35mm-36-Exposures-p356363044",
         "selector": ".label__text"
     },
     {
-        "id": 109,
+        "id": 108,
         "website_name": "Legacy Photo Lab",
         "film_name": "Provia 100F",
         "url": "https://legacy-photolab.com/products/fuji-provia-100f-100-iso-35mm-x-36-exp",
         "selector": ".atc-button--text"
     },
     {
-        "id": 110,
+        "id": 109,
         "website_name": "District Camera",
         "film_name": "Provia 100F",
         "url": "https://www.districtcamera.com/products/fujifilm-provia-100-36f-professional-fujichrome-rdp-iii-color-transparency-film-35mm-roll-film-36-exposures",
         "selector": ".product-form__add-button"
     },
     {
-        "id": 111,
+        "id": 110,
         "website_name": "Stewarts Photo",
         "film_name": "Provia 100F",
         "url": "https://www.stewartsphoto.com/fujifilm-provia-100-pro-rdpiii-135-36.html",
         "selector": ".out-of-stock"
     },
     {
-        "id": 112,
+        "id": 111,
         "website_name": "Film Supply Club",
         "film_name": "Provia 100F",
         "url": "https://filmsupply.club/products/fujfilm-provia-100-35mm-color-positive-film-single-roll",
         "selector": "[data-add-to-cart-text]"
     },
     {
-        "id": 113,
+        "id": 112,
         "website_name": "OC Camera",
         "film_name": "Provia 100F",
         "url": "https://www.occamera.com/product-p/16326028(32616).htm",
         "selector": ".StockQuantity_OutOfStock"
     },
     {
-        "id": 114,
+        "id": 113,
         "website_name": "Nelson",
         "film_name": "Provia 100F",
         "url": "https://nelsonphotoandvideo.com/products/fuji-pro-rdpiii-135-36",
         "selector": ".product-info__add-button"
     },
     {
-        "id": 115,
+        "id": 114,
         "website_name": "Austin Camera",
         "film_name": "Provia 100F",
         "url": "https://austincamera.com/products/fujifilm-fujichrome-provia-100f-professiona-color-transparency-film-35mm-roll-film-36-exposures",
         "selector": "[data-add-to-cart-text]"
     },
     {
-        "id": 116,
+        "id": 115,
         "website_name": "Reformed Film Lab",
         "film_name": "Provia 100F",
         "url": "https://reformedfilmlab.com/products/fuji-provia-100f-35mm-36-exposure-roll",
         "selector": "[data-add-to-cart-text]"
     },
     {
-        "id": 117,
+        "id": 116,
         "website_name": "Poto Care",
         "film_name": "Provia 100F",
         "url": "https://www.fotocare.com/FUJIFILM_PROVIA_RDP_III_135_36_p/16380.htm",
         "selector": "div[itemprop='offers']"
     },
     {
-        "id": 118,
+        "id": 117,
         "website_name": "Ace Photo",
         "film_name": "Provia 100F",
         "url": "https://acephoto.net/do-not-use/fuji-provia-100f-35mm-36-exp/",
         "selector": ".alertBox--error"
     },
     {
-        "id": 119,
+        "id": 118,
         "website_name": "Ace Photo",
         "film_name": "Provia 100F",
         "url": "https://acephoto.net/cameras/fuji-provia100-f-135-36-e-6-slide-film/",
         "selector": ".alertBox--error"
     },
     {
-        "id": 120,
+        "id": 119,
         "website_name": "District Camera",
         "film_name": "Provia 100F",
         "url": "https://www.districtcamera.com/products/fujifilm-provia-100-36f-professional-fujichrome-rdp-iii-color-transparency-film-35mm-roll-film-36-exposures",
         "selector": ".product-form__add-button"
     },
     {
-        "id": 121,
+        "id": 120,
         "website_name": "Essential Photo Supply",
         "film_name": "Provia 100F",
         "url": "https://essentialphotosupply.com/products/fujifilm-fujichrome-provia-100f-professional-rdp-iii-color-transparency-film-35mm-roll-film-36-exposures",
         "selector": ".AddtoCart"
     },
     {
-        "id": 122,
+        "id": 121,
         "website_name": "ArtByPino",
         "film_name": "Provia 100F",
         "url": "https://artbypino.com/products/fujifilm-fujichrome-provia-rdp-iii-100f-color-e6-slide-35mm-36-exp-film",
         "selector": ".product-form__submit"
     },
     {
-        "id": 123,
+        "id": 122,
         "website_name": "Bedford Camera & Video",
         "film_name": "Provia 100F",
         "url": "https://www.bedfords.com/4547410247626",
         "selector": "#form-action-addToCart"
     },
     {
-        "id": 124,
+        "id": 123,
         "website_name": "Decisive Moment (AU)",
         "film_name": "Provia 100F",
         "url": "https://www.decisivemoment.com.au/product-page/fujifilm-provia-100f-35mm-film",
         "selector": "[data-hook='BackInStockButton.Root']"
     },
     {
-        "id": 125,
+        "id": 124,
         "website_name": "Bristol Cameras (UK)",
         "film_name": "Provia 100F",
         "url": "https://www.bristolcameras.co.uk/product/fuji-provia-100f-36-exposure-35mm-film/",
         "selector": ".stock"
     },
     {
-        "id": 126,
+        "id": 125,
         "website_name": "Analogue Wonderland (UK)",
         "film_name": "Provia 100F",
         "url": "https://analoguewonderland.co.uk/products/fuji-provia-100f-film-35mm-colour-iso-100",
         "selector": ".product-form__add-button"
     },
     {
-        "id": 127,
+        "id": 126,
         "website_name": "The Photographers' Gallery (UK)",
         "film_name": "Provia 100",
         "url": "https://bookshop.thephotographersgallery.org.uk/products/fujifilm-provia-100f-35mm-film-36-exposures-14-99-incl-vat",
         "selector": ".product-form__submit"
     },
     {
-        "id": 128,
+        "id": 127,
         "website_name": "Stuck in Film (UK)",
         "film_name": "Provia 100F",
         "url": "https://stuckinfilm.co.uk/products/fujifilm-provia-100f-35mm-film",
         "selector": ".product-form__submit"
     },
     {
-        "id": 129,
+        "id": 128,
         "website_name": "Parallax Photographic Coop (UK)",
         "film_name": "Provia 100F",
         "url": "https://parallaxphotographic.coop/shop/fuji-provia-100f-35mm-film-36-exposures/",
@@ -279,62 +272,55 @@ tracking_list = [
     ########## FUJICHROME Velvia 100 ##########
     {
         "id": 200,
-        "website_name": "Henry's",
-        "film_name": "Velvia 100",
-        "url": "https://www.henrys.com/fujifilmchrome-velvia-100-rvp-35mm-film/5637223937.p?size=35mm&style=36+Exp",
-        "selector": ".ms-buybox__inventory-label"
-    },
-    {
-        "id": 201,
         "website_name": "Legacy Photo Lab",
         "film_name": "Velvia 100",
         "url": "https://legacy-photolab.com/products/fuji-fujichrome-velvia-100-iso-35mm-x-36-exp",
         "selector": ".product__badge"
     },
     {
-        "id": 202,
+        "id": 201,
         "website_name": "Camera House (AU)",
         "film_name": "Velvia 100",
         "url": "https://www.camerahouse.com.au/fujifilm-fujichrome-velvia-100-35mm-36-exposure-pro-colour-transparency-film-1",
         "selector": ".stock"
     },
     {
-        "id": 203,
+        "id": 202,
         "website_name": "Decisive Moment (AU)",
         "film_name": "Velvia 100",
         "url": "https://www.decisivemoment.com.au/product-page/fujifilm-velvia-100-35mm-film",
         "selector": "[data-hook='BackInStockButton.Root']"
     },
     {
-        "id": 204,
+        "id": 203,
         "website_name": "Bristol Cameras (UK)",
         "film_name": "Velvia 100",
         "url": "https://www.bristolcameras.co.uk/product/fuji-velvia-100-36-exposure-35mm-film/",
         "selector": ".stock"
     },
     {
-        "id": 205,
+        "id": 204,
         "website_name": "Analogue Wonderland (UK)",
         "film_name": "Velvia 100",
         "url": "https://analoguewonderland.co.uk/products/fuji-velvia-film-35mm-colour-iso-100",
         "selector": ".product-form__add-button"
     },
     {
-        "id": 206,
+        "id": 205,
         "website_name": "The Photographers' Gallery (UK)",
         "film_name": "Velvia 100",
         "url": "https://bookshop.thephotographersgallery.org.uk/products/fujifilm-velvia-50-35mm-film-36-exposures-15-99-incl-vat",
         "selector": ".product-form__submit"
     },
     {
-        "id": 207,
+        "id": 206,
         "website_name": "Stuck in Film (UK)",
         "film_name": "Velvia 100",
         "url": "https://stuckinfilm.co.uk/products/copy-of-fujifilm-velvia-100-120-film-5-pack",
         "selector": ".product-form__submit"
     },
     {
-        "id": 208,
+        "id": 207,
         "website_name": "Parallax Photographic Coop (UK)",
         "film_name": "Velvia 100",
         "url": "https://parallaxphotographic.coop/shop/fuji-velvia-100-35mm-film-36-exposures/",
@@ -487,43 +473,6 @@ tracking_list = [
         "film_name": "Velvia 50",
         "url": "https://parallaxphotographic.coop/shop/fuji-velvia-50-35mm-film-36-exposures/",
         "selector": ".stock"
-    },
-    ########## Kodak Professional Ektachrome E100 Color Reversal Film ##########
-    {
-        "id": 400,
-        "website_name": "Dodd Camera",
-        "film_name": "Kodak E100",
-        "url": "https://doddcamera.com/kodak-professional-ektachrome-e100-color-reversal-film-135-36",
-        "selector": ".stock"
-    },
-    {
-        "id": 401,
-        "website_name": "Samy's Camera",
-        "film_name": "Kodak E100",
-        "url": "https://www.samys.com/p/Film/1884576/Ektachrome-E100-Color-Transparency-Film-35mm-Roll-Film,-36-Exposures/205598.html",
-        "selector": ".availability-container"
-    },
-    {
-        "id": 402,
-        "website_name": "Henry's",
-        "film_name": "Kodak E100",
-        "url": "https://www.henrys.com/kodak-ektachrome-e100g-135-36-100iso/5637232799.p?size=35mm&style=36+Exp",
-        "selector": ".ms-buybox__inventory-container"
-    },
-    ########## Flic Film Chrome 100 Color Reversal Film - Respooled Kodak Ektachrome 100D ##########
-    {
-        "id": 500,
-        "website_name": "Unique Photo",
-        "film_name": "Flic Film Chrome 100",
-        "url": "https://www.uniquephoto.com/product/flic-film-chrome-100-35mm-36-ex",
-        "selector": ".chakra-badge"
-    },
-    {
-        "id": 501,
-        "website_name": "B&C Camera",
-        "film_name": "Flic Film Chrome 100",
-        "url": "https://store.bandccamera.com/products/flic-film-chrome-100-35mm-roll-film-36-exposures",
-        "selector": ".product-form__inventory"
     }
 ]
 
