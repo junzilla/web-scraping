@@ -53,11 +53,12 @@ def film_stock_check(sites_config):
                         print(f"🔴 [无货] {film_name} @ {site_name}\n")
                         out_of_stock_count += 1
                 else:
-                    print(f"🟡  [变动] {site_name}: 找不到选择器 '{selector}'\n")
+                    print(f"🟡  [变动] {site_name}: 找不到选择器 '{selector}'")
                     print(f"       🔗: {url}\n")
                     need_fix += 1
         except Exception as e:
             print(f"⚠️  [出错] {site_name}: {e}")
+            print(f"       🔗: {url}\n")
     
     success_count = in_stock_count + out_of_stock_count + need_fix_count
     print(f"=================== {success_count}/{len(sites_config)} 检查完成 ====================")
