@@ -488,6 +488,35 @@ tracking_list = [
         "film_name": "Velvia 50",
         "url": "https://parallaxphotographic.coop/shop/fuji-velvia-50-35mm-film-36-exposures/",
         "selector": ".stock"
+    },
+    ########## Others  ##########
+    {
+        "id": 400,
+        "website_name": "Photo Warehouse",
+        "film_name": "Provia 400 RHP",
+        "url": "https://www.ultrafineonline.com/furxppr4035x.html",
+        "selector": ".add-to-cart h2"
+    },
+    {
+        "id": 401,
+        "website_name": "Photo Warehouse",
+        "film_name": "Velvia 100F RVP",
+        "url": "https://www.ultrafineonline.com/furvp13fuve1.html",
+        "selector": ".add-to-cart h2"
+    },
+    {
+        "id": 402,
+        "website_name": "Photo Warehouse",
+        "film_name": "Velvia 100 RVP",
+        "url": "https://www.ultrafineonline.com/fufuprove10r.html",
+        "selector": ".add-to-cart h2"
+    },
+    {
+        "id": 403,
+        "website_name": "Photo Warehouse",
+        "film_name": "Provia 100F 5 Packs",
+        "url": "https://www.ultrafineonline.com/fupr10rd35x3.html",
+        "selector": ".add-to-cart h2"
     }
 ]
 
