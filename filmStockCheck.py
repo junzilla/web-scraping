@@ -1,7 +1,24 @@
-import requests
-from bs4 import BeautifulSoup
+"""
+Description:
+    This script automates the process of checking stock availability for specific
+    photographic films (e.g., Fujichrome Provia 100F) across multiple retailer websites.
+    
+    It operates by fetching target URLs via `requests`, parsing the HTML with 
+    `BeautifulSoup`, and analyzing specific DOM elements. The script determines 
+    availability by comparing text against a list of "out of stock" keywords 
+    (e.g., "Sold Out", "Backordered").
+Author:
+    Junzilla
+Date:
+    2025.12.14
+Warning:
+    !!! Unauthorized copying of this code is strictly prohibited !!!
+"""
+
 import time
 import random
+import requests
+from bs4 import BeautifulSoup
 
 def film_stock_check(sites_config):
     headers = {
@@ -43,7 +60,7 @@ def film_stock_check(sites_config):
                     # comment out this line for debugging
                     print(f"      {id} {text}")
 
-                    bad_words = ["out of stock", "sold out", "backordered", "notify when", "unavailable", "special order", "call store", "coming back soon", "4 week", "pre-order"]
+                    bad_words = ["out of stock", "sold out", "backordered", "notify when", "unavailable", "special order", "call store", "soon", "4 week", "pre-order"]
                     is_out_of_stock = any(w in text for w in bad_words)
                     if not is_out_of_stock:
                         print(f"🟢 [有货] {film_name} @ {site_name}")
@@ -53,9 +70,9 @@ def film_stock_check(sites_config):
                         print(f"🔴 [无货] {film_name} @ {site_name}\n")
                         out_of_stock_count += 1
                 else:
-                    print(f"🟡  [变动] {site_name}: 找不到选择器 '{selector}'")
+                    print(f"🟡 [变动] {site_name}: 找不到选择器 '{selector}'")
                     print(f"       🔗: {url}\n")
-                    need_fix += 1
+                    need_fix_count += 1
         except Exception as e:
             print(f"⚠️  [出错] {site_name}: {e}")
             print(f"       🔗: {url}\n")
@@ -489,7 +506,7 @@ tracking_list = [
         "url": "https://parallaxphotographic.coop/shop/fuji-velvia-50-35mm-film-36-exposures/",
         "selector": ".stock"
     },
-    ########## Others  ##########
+    ########## Others ##########
     {
         "id": 400,
         "website_name": "Photo Warehouse",
@@ -519,6 +536,5 @@ tracking_list = [
         "selector": ".add-to-cart h2"
     }
 ]
-
 
 film_stock_check(tracking_list)
